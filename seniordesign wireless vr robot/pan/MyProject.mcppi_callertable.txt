@@ -1,0 +1,37 @@
+main
+	__CC2DW
+	UART1_Init
+	UART1_Write
+interrupt
+	ADC_Read
+		ADC_Init
+		ADC_Get_Sample
+			Delay_22us
+	convert
+		Int2Double
+			NRM3232
+				RES032
+				SETFUN32
+				FIXSIGN32
+	Mul_32x32_FP
+		RES032
+		SETFOV32
+		SETFUN32
+	Add_32x32_FP
+		NRM4032
+			RES032
+			SETFUN32
+			FIXSIGN32
+			SETFOV32
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+		SETFOV32
+	Int2Double
+		NRM3232
+			RES032
+			SETFUN32
+			FIXSIGN32
+	Double2Int
+		SETIOV3224

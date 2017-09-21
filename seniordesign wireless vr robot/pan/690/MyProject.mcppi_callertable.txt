@@ -1,0 +1,23 @@
+main
+	__CC2DW
+		____DoICP
+	init
+		UART1_Init
+		ADC_Init
+	enable_interrupts
+	outInt
+		IntToStr
+			WordToStr
+				Div_16x16_U
+		UART1_Write_Text
+			UART1_Write
+		UART1_Write
+	UART1_Write_Text
+		UART1_Write
+interrupt
+	Task
+		ADC_Read
+			Delay_22us
+		Div_16x16_S
+			Div_16x16_S_L
+		Mul_16x16_U

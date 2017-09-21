@@ -1,0 +1,57 @@
+% ----------------------------------------------------------------
+% Article Class (This is a LaTeX2e document)  ********************
+% ----------------------------------------------------------------
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{framed}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{setspace}
+
+\oddsidemargin 0.0in
+%\evensidemargin 1.0in
+\textwidth 6.5in
+%\headheight 1.0in
+\topmargin -0.5in
+\textheight 8.75in
+\onehalfspacing
+%\footheight 1.0in
+%http://www.astro.rug.nl/~kuijken/latex.html
+% THEOREMS -------------------------------------------------------
+
+\newcommand{\myfig}[2] {
+    \label{page:#1}
+    \begin{figure}[ht]
+        \begin{framed}
+        \centering
+          \includegraphics[width=0.9\textwidth]{#1}\\
+          \caption{#2}\label{fig:#1}
+        \end{framed}
+    \end{figure}
+}
+\newcommand{\bra}{\left[}
+\newcommand{\ket}{\right]}
+\newcommand{\lp} {\left(}
+\newcommand{\rp}{\right)}
+% ----------------------------------------------------------------
+\begin{document}
+\begin{eqnarray}
+\nonumber
+z &=& z\ axis\ acceleration(downward)\\
+\nonumber
+y &=& y\ axis\ acceleration (outward)\\
+\nonumber
+\sqrt{y^2+z^2} &=& a_{tilt}\\
+\nonumber
+\theta_{tilt} &=& \arccos{\frac{z}{\sqrt{y^2+z^2}}}\\
+\nonumber
+\theta_{tilt} &=& \arcsin{\frac{y}{\sqrt{y^2+z^2}}}\\
+\nonumber
+\theta_{tilt} &=& \arctan{\frac{y}{z}}
+\end{eqnarray}
+
+\end{document}
+

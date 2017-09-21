@@ -1,0 +1,11 @@
+main
+	UART1_Init
+	ADC_Read
+		ADC_Init
+		ADC_Get_Sample
+			Delay_22us
+	IntToStr
+		WordToStr
+			Div_16x16_U
+	PrintAString
+		UART1_Write
